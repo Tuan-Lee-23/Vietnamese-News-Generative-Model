@@ -11,4 +11,4 @@ tqdm==4.62.3
 transformers==4.16.2
 wandb==0.12.10
 pyarrow==6.0.1
-torch=1.10.0
+torch==1.10.0
