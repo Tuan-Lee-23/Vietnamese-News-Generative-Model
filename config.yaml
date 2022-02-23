@@ -1,0 +1,51 @@
+# dataset
+train_size: 0.9
+dataloader_num_workers: 2
+category_limit:
+    - thời sự 
+    - thế giới
+    - tài chính kinh doanh
+    - đời sống
+    - văn hoá
+    - giải trí
+    - giới trẻ
+    - giáo dục
+    - công nghệ
+    - sức khoẻ
+
+# path
+PATH_dataset: data/news.csv
+PATH_train: data/train.csv
+PATH_val: data/val.csv
+
+# training setup
+training_output_dir: ./ViNews-GPT2
+num_train_epochs: 8
+batch_size: 4
+eval_steps: 20
+save_strategy: steps
+save_steps: 60
+save_total_limit: 2
+warmup_ratio: 0.5
+gradient_accumulation_steps: 32
+learning_rate: 32e-4
+weight_decay: 0.05
+label_smoothing_factor: 0
+early_stopping_patience: 10
+max_seq_len: 768
+gradient_checkpointing: False
+logging_steps: 2
+
+load_best_model_at_end: True
+metric_for_best_model: eval_loss
+
+# Huggingface Hub
+push_to_hub: True
+hub_model_id: VN-News-GPT2
+hub_token: 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
+
+# Wandb
+report_to: wandb
+wandb_run_name: Run 4 (kaggle)
+wandb_project_name: Vi-GPT2_News
+wandb_api_key: 6f927fe3835ebcc7bb05946984340ac2c810388e
