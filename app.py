@@ -24,12 +24,12 @@ if __name__ == "__main__":
         category = str(option)
         headline = st.text_input('Headline (or part of the headline)')
         num_return_sequences = st.slider('Number of return sequences', min_value = 1, max_value = 5, value = 2)
-        max_len = st.slider('Max Length', min_value = 80, max_value = 768, value = 300)
+        max_len = st.slider('Max Length', min_value = 80, max_value = 500, value = 300)
         with st.expander("Setting parameters"):
-            min_len = st.slider('Min Length', min_value = 0, max_value = 50, value = 60)
+            min_len = st.slider('Min Length', min_value = 0, max_value = 50, value = 50)
             top_k = st.slider('Top k', min_value = 30, max_value = 200, value = 50)
             top_p = st.slider('Top p', min_value = 0.0, max_value = 1.0, value = 0.8)
-            num_beams = st.slider('Num Beams', min_value = 1, max_value = 6, value = 3)
+            num_beams = st.slider('Num Beams', min_value = 1, max_value = 6, value = 2)
             
 
         submit_button = st.form_submit_button(label='Generate', )
