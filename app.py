@@ -1,5 +1,4 @@
 import streamlit as st
-import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 
@@ -17,7 +16,7 @@ def generate(model, tokenizer, category, headline,
     """
     text = f"<|startoftext|> {category} <|headline|> {headline}"
 
-    input_ids = tokenizer.encode(text, return_tensors='pt').to(device)
+    input_ids = tokenizer.encode(text, return_tensors='pt')
 
     sample_outputs = model.generate(input_ids,
                                     do_sample=True,
@@ -40,14 +39,12 @@ def generate(model, tokenizer, category, headline,
 
     return outputs
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
 if __name__ == "__main__":
     # Batch modification
     with st.form(key='my_form'):
         print("Loading model...")
         tokenizer = AutoTokenizer.from_pretrained("tuanle/VN-News-GPT2")
-        model = AutoModelForCausalLM.from_pretrained("tuanle/VN-News-GPT2").to(device)
+        model = AutoModelForCausalLM.from_pretrained("tuanle/VN-News-GPT2")
         
         print("Model is ready to serve...")
         desc = "Vietnamese News Generative Model - finetuned GPT2"
