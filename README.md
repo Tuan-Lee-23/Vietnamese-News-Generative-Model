@@ -1,20 +1,3 @@
----
-language: 
-  - vi
-thumbnail: "url to a thumbnail used in social sharing"
-tags:
-- News
-- Language model
-- GPT2
-datasets:
-- Private Vietnamese News dataset
-metrics:
-- rouge
-- wer
-
----
-
-
 # GPT-2 Fine-tuning With Vietnamese News
 ## Model description
 A Fine-tuned Vietnamese GPT2 model which can generate Vietnamese news based on context (category + headline), based on the Vietnamese Wiki GPT2 pretrained model (https://huggingface.co/danghuy1999/gpt2-viwiki)
