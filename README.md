@@ -2,8 +2,8 @@
 ## Model description
 A Fine-tuned Vietnamese GPT2 model which can generate Vietnamese news based on context (category + headline), based on the Vietnamese Wiki GPT2 pretrained model (https://huggingface.co/danghuy1999/gpt2-viwiki)
 
-## Github
-- https://github.com/Tuan-Lee-23/Vietnamese-News-Generative-Model
+## Huggingface hub
+- https://huggingface.co/tuanle/VN-News-GPT2
 
 ## Purpose
 This model was made only for fun and experimental study. However, It gives impressive results
