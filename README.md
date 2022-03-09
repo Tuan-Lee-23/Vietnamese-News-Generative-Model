@@ -21,8 +21,7 @@ Categories are:
 - Word error rate: 1.08
 
 ## Deployment
-- You can run the model deployment in this Colab's [link](https://colab.research.google.com/drive/1ITnYPnngd_aqkFB2A5IhzSsX4jQSPOR1?usp=sharing)
-- Then go to this link: https://gptvn.loca.lt
+- You can now use my deployment at Huggingface' space (https://huggingface.co/spaces/tuanle/VN-News-GPT2)
 - You can choose any categories and give it some text for the headline, then generate. There we go
 - P/s: I've already tried to deploy my model on Streamlit's cloud, but It was always being broken due to out of memory
 - Example result
